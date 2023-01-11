@@ -1,1 +1,2 @@
-1st python repository readme file
+
+This repository contains all task on python "ALX SE"
