@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-
-
+#!/usr/bin/python
 """Lists all states from the database hbtn_0e_0_usa
 """
 import sys
@@ -18,5 +16,7 @@ if __name__ == "__main__":
 
   for state in allstates:
       print(state)
-
+      
+      c.close()
+      db.close()
 
