@@ -6,12 +6,15 @@ import sys
 import MySQLdb
 
 if __name__ == '__main__':
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], 
+                       db=sys.argv[3], port=3306, host='localhost')
     
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name \ 
-    FROM cities JOIN states ON cities.state_id = states.id \ 
-    WHERE states.name = '{}';".format(sys.argv[4])) 
-    states = cur.fetchall() 
+    cur.execute("SELECT cities.name FROM cities INNER JOIN states ON \
+            states.id=cities.state_id WHERE states.name LIKE BINARY \ 
+            %(states_name)s \ 
+            ORDER BY cities.id ASC", {'states_name': sys.argv[4]}) 
+    rows = cur.fetchall() 
+    if rows is not None:
 
-    print(", ".join([state[1] for state in states]))
+    print(", ".join([row[0] for row in rows]))
