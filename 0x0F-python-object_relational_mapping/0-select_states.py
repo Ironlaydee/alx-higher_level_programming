@@ -23,6 +23,7 @@ def list_all():
     if result:
         for row in result:
             print(row)
-    
+   
+
 if __name__ == '__main__':
     list_all()
