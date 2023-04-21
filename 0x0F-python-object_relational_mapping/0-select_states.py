@@ -5,6 +5,7 @@ fron sys import argv
 import MySQLdb
 
 if __name__ == '__main__': 
+    
     (user,password,db=argv[1],argv[2],argv[3],
     db = MySQLdb.connect(host='localhost', user=user, 
                         passwd=password, db=database)
