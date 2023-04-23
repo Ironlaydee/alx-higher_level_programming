@@ -22,7 +22,7 @@ def list_all():
     cur.close()
     db.close()
     if result:
-        for row [1][2] == 'N':
+        for row [1][0] == 'N':
             print(row)
 
 if __name__ == '__main__':
