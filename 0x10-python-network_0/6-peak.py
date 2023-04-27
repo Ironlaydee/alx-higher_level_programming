@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # a function that finds a peak in the list of integers
 
+
 def find_peak(list_of_integers):
     """Find a peak in the list_of_intergers"""
 
