@@ -7,7 +7,7 @@ import urlib requests
 if __name__ == '__main__': 
     request = urlib.request.Request("https://alx-intranet.hbtn.io/status")
     with urllib.request.urlopen(request) as response:
-        content = response.read()
+        body = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
         print("\t- comtent: {}".format(content))
