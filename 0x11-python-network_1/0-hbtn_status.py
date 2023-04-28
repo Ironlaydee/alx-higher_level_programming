@@ -5,8 +5,9 @@ import urlib packages
 
 
 if __name__ == '__main__': 
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-        content = response.read()
+    request = urlib.request.Request("https://alx-intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as res:
+        content = res.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
         print("\t- comtent: {}".format(content))
