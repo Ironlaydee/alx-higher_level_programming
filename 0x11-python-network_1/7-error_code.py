@@ -5,7 +5,7 @@ displays the body of the response
 """
 
 import sys
-import responses
+import requests
 
 
 if __name__ == "__main__":
