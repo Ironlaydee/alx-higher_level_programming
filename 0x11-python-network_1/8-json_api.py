@@ -3,6 +3,7 @@
 sends a POST request to http://0.0.0.0:5000/search_user
 with the letter as parameter
 """
+
 import sys
 import requests
 
