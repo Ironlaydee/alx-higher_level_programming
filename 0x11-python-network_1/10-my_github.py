@@ -5,7 +5,7 @@ uses the GitHub API to access my id
 
 import sys
 import requests
-from request.auth import HTTPBasicAuth
+from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
